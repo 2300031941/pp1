@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    z-index: 1000;
+    padding: 8px 0;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    letter-spacing: 0.6px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #FFD700;
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 120px 20px;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Backgrounds - vivid gradients */
+#home {
+    background: linear-gradient(135deg, #4CAF50, #1b5e20, #66bb6a);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
+}
+
+#about {
+    background: linear-gradient(135deg, #2196F3, #0d47a1, #64b5f6);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
+}
+
+#services {
+    background: linear-gradient(135deg, #f44336, #b71c1c, #ef9a9a);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
+}
+
+#contact {
+    background: linear-gradient(135deg, #555, #111, #888);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
+}
+
+/* Headings & Paragraphs */
+section h1, section h2 {
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+section p {
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
